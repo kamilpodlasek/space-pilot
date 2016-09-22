@@ -1,0 +1,169 @@
+body {
+	background-image: url(images/bg.gif);
+	font-family: 'century gothic', arial, sans-serif;
+	color: rgba(255,255,255,0.7);
+	text-align: center;
+}
+
+::-webkit-scrollbar {
+    display: none; 
+}
+
+h1 {
+	margin: 0;
+	margin-top: 20px;
+	font-size: 4em;
+}
+
+h2 {
+	margin: 20px;
+	font-size: 2em;
+}
+
+h4 {
+	margin: 0;
+	font-size: 2em;
+}
+
+h5 {
+	position: absolute;
+	font-size: 3em;
+	top: 0; left: 0; right: 0;
+	margin: 20px;
+	color: rgba(255,255,255,0.5);
+}
+
+.center {
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.stats {
+	position: absolute;
+	height: 128px;
+	width: 230px;
+	background-color: rgba(255,255,255,0.1);
+	box-shadow: 0 0 15px 15px rgba(255,255,255,0.1);
+	left: 0; bottom: 0;
+	border-top-right-radius: 12%;
+}
+
+.overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0; top: 0;
+	background: #000;
+	opacity: 0.6;
+}
+
+.name {
+	margin: 0 auto;
+	width: 250px;
+	font-size: 1.5em;
+	padding: 10px;
+	border: solid 5px #c9c9c9;
+	-webkit-transition: border 0.3s;
+	-moz-transition: border 0.3s;
+	-o-transition: border 0.3s;
+	transition: border 0.3s;
+}
+
+.name:focus {
+	outline: none;
+	border: solid 5px #969696;
+}
+
+.start {
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 180px;
+	font-size: 2em;
+	padding: 6px;
+	cursor: pointer;
+	border: solid 5px #747474;
+}
+
+#restart {
+	margin-top: 30px;
+	width: 140px;
+	font-size: 1.2em;
+}
+	
+.rank {
+	height: 268px;
+	width: 280px;
+	overflow: hidden;
+	font-size: 1.5em;
+	background-color: rgba(255,255,255,0.1);
+	box-shadow: 0 0 15px 15px rgba(255,255,255,0.1);
+	position: absolute;
+	right: 0; bottom: 0;
+	border-top-left-radius: 6%;
+}
+
+ol {
+	margin: 0 0 0 10px;
+	height: inherit;
+	overflow-y: scroll;
+}
+
+.endRank {
+	border-radius: 6%;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+.map {
+    border-radius: 50%;
+	width: 600px;
+    height: 600px;
+    background-image: url(images/map.png);
+	background-size: contain;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.circle {
+    border-radius: 50%;
+	width: 100px;
+    height: 100px;
+    background-image: url(images/circle.png);
+	background-size: contain;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.rotation {
+	-webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+
+.circleEmpty {
+    border-radius: 50%;
+	width: 68px;
+    height: 68px;
+	align-self: center;
+}
+
+footer {
+	font-size: 1em;
+	position: absolute;
+	left: 0; right: 0; bottom: 20px;
+	z-index: 100;
+}
+
+footer a {
+	text-decoration: none;
+	color: inherit;
+}

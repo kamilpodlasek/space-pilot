@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Space Pilot</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	<div class="map">
+		<div class="circle" style="display: none;"><div class="circleEmpty"></div></div>
+	</div>
+	
+	<div id="welcomeScreen" class="overlay">
+		<h1>SPACE PILOT</h1>
+		<div class="center">
+			<h2 class="enterName">Enter your name:</h2>
+			<input type="text" class="name" placeholder="Name">
+			<button class="start">START</button>
+			<h2>Don't let the space probe</br>leave the atmosphere...</h2>
+		</div>
+	</div>
+	
+	<div id="gameScreen" style="display: none;">
+		<h5>SPACE PILOT</h5>
+		<div class="stats">
+			<h4>LEVEL: <span class="level">1</span></h4>
+			<h4>SCORE: <span class="score">0</span></h4>
+			<h4>SPEED: <span class="speed">1</span></h4>
+		</div>
+		<div class="rank"></div>
+	</div>
+	
+	<div id="endGameScreen" class="overlay" style="visibility: hidden">
+		<h1>YOU LOSE</h1>
+		<div class="center">
+			<h4>LEVEL: <span class='level'>1</span></h4>
+			<h4>SCORE: <span class='score'>0</span></h4>
+			<div class="rank endRank"></div>
+			<button id="restart" class="start" onClick="location.reload();">RESTART</button>
+		</div>
+	</div>
+	
+	<footer>&#169 Copyright <span id="year"></span> <a href="http://kamilpodlasek.pl/" target="_blank">Kamil Podlasek</a></footer>
+	<script>
+		$("#year").text(new Date().getFullYear());
+	</script>
+</body>
+</html>
